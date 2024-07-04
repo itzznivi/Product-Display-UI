@@ -1,15 +1,15 @@
 import React from "react";
 
 function Sidebar() {
-  const features = ["Feature 1", "Feature 1", "Feature 1", "Feature 1"];
+  const features = ["Feature 1", "Feature 2", "Feature 3", "Feature 4"];
 
   return (
-    <div>
-      <div>
-        <h3 className="text-[30px] italic text-[#535C91]">Compare</h3>
+    <div className="flex flex-col justify-center items-center h-full">
+      <div className="text-center">
+        <h3 className="mr-10 text-[30px] italic text-[#535C91]">Compare</h3>
         <h3 className="text-[30px] font-bold text-[#535C91]">Products</h3>
-        <div className="mt-96">
-          <div className="relative mt-[-12px] flex gap-x-[10px] font-semibold text-[18px]">
+        <div className="mt-80">
+          <div className="relative mt-[-12px] flex gap-x-[10px] font-semibold text-[18px] justify-center">
             <button className="bg-[#362d86] text-white xl:px-[25px] xl:py-[7px] lg:px-[15px] lg:py-[5px] md:px-[12px] md:py-[3px] px-[10px] py-[2px] lg:text-[16px] md:text-[12px] text-[10px] lg:rounded-[4px] rounded-[3px]">
               Full
             </button>
@@ -28,17 +28,21 @@ function Sidebar() {
       <h1 className="text-2xl text-blue-900 font-lato font-bold mt-10">
         Features
       </h1>
-      <div className="-mt-1 p-10">
+      <div className="p-10">
         {features.map((feature, index) => (
-          <div key={index} className="font-lato mb-9 text-blue-900">{feature}</div>
+          <div key={index} className="font-lato mb-9 text-blue-900">
+            {feature}
+          </div>
         ))}
       </div>
-      <h1 className="font-lato text-2xl text-blue-900 font-bold">Description</h1>
+      <h1 className="font-lato text-2xl text-blue-900 font-bold">
+        Description
+      </h1>
       <div>
         <div className="font-lato mt-10 text-blue-700">Relative features</div>
       </div>
-      <div className="font-lato mt-52 text-blue-900">pros</div>
-      <div className="font-lato mt-32 text-blue-900">cons</div>
+      <div className="font-lato mt-60 text-blue-900">Pros</div>
+      <div className="font-lato mt-40 text-blue-900">Cons</div>
     </div>
   );
 }
